@@ -1,0 +1,132 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">Generate Mark List</div>
+                </div>
+                <div class="panel-body">
+                    <form action="/result" method="POST">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    Name:
+                                    <input type="text" placeholder="Enter Your Name" name="name" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    Registration Number:
+                                    <input type="text" placeholder="Enter Your Registration Number" name="reg_no" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    Semester:
+                                    <select name="sem" class="form-control input-sm" required>
+                                        <option value="">Select Semester</option>
+                                        <option value="S1">S1</option>
+                                        <option value="S2">S2</option>
+                                        <option value="S3">S3</option>
+                                        <option value="S4">S4</option>
+                                        <option value="S5">S5</option>
+                                        <option value="S6">S6</option>
+                                        <option value="S7">S7</option>
+                                        <option value="S8">S8</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-1 col-lg-1"></div>
+                            <div class="col-xs-12 col-md-7 col-lg-7">Subject Name</div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">Marks Obtained</div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">Total Marks</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-1 col-lg-1"><p>Subject 1</p></div>
+                            <div class="col-xs-12 col-md-7 col-lg-7">
+                                <div class="form-group">
+                                <input type="text" placeholder="Subject Name" name="S1_N" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Marks Obtained in this Subject" name="S1_M_O" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Total Marks" name="S1_T_M" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-1 col-lg-1"><p>Subject 2</p></div>
+                            <div class="col-xs-12 col-md-7 col-lg-7">
+                                <div class="form-group">
+                                <input type="text" placeholder="Subject Name" name="S2_N" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Marks Obtained in this Subject" name="S2_M_O" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Total Marks" name="S2_T_M" class="form-control input-sm"required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-1 col-lg-1"><p>Subject 3</p></div>
+                            <div class="col-xs-12 col-md-7 col-lg-7">
+                                <div class="form-group">
+                                <input type="text" placeholder="Subject Name" name="S3_N" class="form-control input-sm">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Marks Obtained in this Subject" name="S3_M_O" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Total Marks" name="S3_T_M" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-1 col-lg-1"><p>Subject 4</p></div>
+                            <div class="col-xs-12 col-md-7 col-lg-7">
+                                <div class="form-group">
+                                <input type="text" placeholder="Subject Name" name="S4_N" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Marks Obtained in this Subject" name="S4_M_O" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                <input type="number" placeholder="Total Marks" name="S4_T_M" class="form-control input-sm" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <button type="submit"  name="button" class="btn btn-primary block-center">Generate</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

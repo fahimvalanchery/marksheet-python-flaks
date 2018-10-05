@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<div class="container">
+        
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-sm-12">
+            <div class=" panel-primary">
+                <div class=" panel-heading">
+                    <div class=" panel-title text-center">Mark List</div>
+                </div>
+                <div class=" panel-body">
+                <form action="">
+                    <div class="jumbotron">    
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12 col-lg-12">
+                               <label> Name:</label>     <label class="text-uppercase" > {{StudentDetails[0]}} </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12 col-lg-12">
+                               <label> Register Number:</label>   <label class="text-uppercase" >  {{StudentDetails[1]}}</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12 col-lg-12">
+                            <label>  Semester: </label>  <label> {{StudentDetails[2]}} </label>
+                        </div>
+                    </div>
+                </div>
+                   <br>
+                    <table class="table-responsive   table-bordered text-center" style="width:100%; height: 100% " >
+                                <tr>
+                                    <th class="text-center">Subject Name</th>
+                                    <th class="text-center">Marks Obtained</th>
+                                    <th class="text-center">Total Marks</th>
+                                    <th class="text-center">Grade</th>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase">{{Subjects[0]}}</td>
+                                    <td>{{ObtainedMarks[0]}}</td>
+                                    <td>{{TotalMarks[0]}}</td>
+                                    <td>{{resGrade[0]}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase">{{Subjects[1]}}</td>
+                                    <td>{{ObtainedMarks[1]}}</td>
+                                    <td>{{TotalMarks[1]}}</td>
+                                    <td>{{resGrade[1]}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase">{{Subjects[2]}}</td>
+                                    <td>{{ObtainedMarks[2]}}</td>
+                                    <td>{{TotalMarks[2]}}</td>
+                                    <td>{{resGrade[2]}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase">{{Subjects[3]}}</td>
+                                    <td>{{ObtainedMarks[3]}}</td>
+                                    <td>{{TotalMarks[3]}}</td>
+                                    <td>{{resGrade[3]}}</td>
+                                </tr>
+                               
+                            </table>
+                            <br>
+                            <p class="text-center">
+                              <label> Semester Status: </label><label>{{res_status}} </label>
+                            </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

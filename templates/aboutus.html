@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+    <p class="text-center">How this works...?</p>
+</div>
+<div class="container">
+    <p>This Web Application contains some fields to get the values from the user, we uses some fields like <br>
+    <ul>
+        <li>Name</li>
+        <li>Register Number</li>
+        <li>Semester</li>
+        <li>Four Subject Names </li>
+        <li>Marks Obtained for that Subjects</li>
+        <li>Total Marks of that Subjects</li>
+    </ul> <br>
+    If user forgotten to enter any field in this web application, it will  notify to enter that field because all the fields in this web application are mandatory.
+    <br>
+    After getting Name,Register Number ,it will convert  into uppercase for a standard certificate model and it directly displays in marklist with the Semester.
+    <br>
+    The Grade will calculate using some Criteria as follows:
+    <br>
+    <br>
+    <table class="table table-condensed table-hover table-bordered table-striped text-center">
+        <tr>
+            <th class="text-center">Marks</th>
+            <th class="text-center">Grade</th>
+        </tr>
+        <tr>
+            <td>>=90</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>>=80</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>>=70</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>>=60</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>Below 60  </td>
+            <td>F</td>
+        </tr>
+    </table>   
+    <br>
+    <br>
+    The Semester Status like Passed/Failed is calculated using other method
+    <br>
+    If any one of the subject contain the <b>Grade = F</b> then the student will Failed in that Semester.     
+</p>
+</div>
+
+{% endblock %}
